@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fitnessclub.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mitglied.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Fitnessclub.h" />
+    <ClInclude Include="Mitglied.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
