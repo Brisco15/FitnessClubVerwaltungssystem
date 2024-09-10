@@ -128,12 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Fitnessclub.cpp" />
+    <ClCompile Include="Kurs.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mitglied.cpp" />
+    <ClCompile Include="Trainer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fitnessclub.h" />
+    <ClInclude Include="Kurs.h" />
     <ClInclude Include="Mitglied.h" />
+    <ClInclude Include="Trainer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
