@@ -13,7 +13,7 @@ protected:
 public:
     void SetVorname(string Vorname);
     string GetVorname();
-    
+
     void SetNachname(string Nachname);
     string GetNachname();
 
@@ -23,5 +23,7 @@ public:
 
     void SetMitgliedsNummer(int Mitgliedsnummer);
     int GetMitgliedsNummer();
+
+
 };
 

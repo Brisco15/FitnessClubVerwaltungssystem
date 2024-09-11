@@ -23,8 +23,16 @@
   </Class>
   <Class Name="Kurs">
     <Position X="8.25" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="Fitnessclub" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="4.247" />
+        <Point X="5" Y="4.45" />
+        <Point X="8.562" Y="4.45" />
+        <Point X="8.562" Y="4.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAIAAAAEAAAAAAAIAAAAEQAAAAAAAAAAAAAQgAABAA=</HashCode>
       <FileName>Kurs.h</FileName>
     </TypeIdentifier>
   </Class>

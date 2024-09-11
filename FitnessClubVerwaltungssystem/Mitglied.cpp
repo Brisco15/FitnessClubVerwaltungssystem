@@ -1,6 +1,7 @@
 #include "Mitglied.h"
 
 
+
 void Mitglied::SetVorname(string Vorname)
 {
     // TODO: Fügen Sie hier Ihren Implementierungscode ein..
@@ -51,3 +52,9 @@ int Mitglied::GetMitgliedsNummer()
     // TODO: Fügen Sie hier Ihren Implementierungscode ein..
     return Mitgliedsnummer;
 }
+
+
+
+
+
+

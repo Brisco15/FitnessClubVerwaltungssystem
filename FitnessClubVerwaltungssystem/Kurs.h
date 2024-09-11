@@ -1,5 +1,6 @@
 #pragma once
 #include "Fitnessclub.h"
+#include "Trainer.h"
 
 class Kurs :
     protected Fitnessclub
@@ -7,8 +8,16 @@ class Kurs :
 
 protected:
     string Name;
+    Trainer* kursTrainer;
 public:
-    void SetName(string Name);
+    Kurs();
+    void SetName(string& Name);
     string GetName();
+
+    void SetTrainer(string trainer);
+    Trainer* GetTrainer();
+
+    // Destruktor 
+    ~Kurs();
 };
 
