@@ -1,9 +1,11 @@
 #pragma once
 #include <string>
 #include "Fitnessclub.h"
+#include<iostream>
+using namespace std;
 
 class Mitglied :
-    protected Fitnessclub
+    public Fitnessclub
 {
 protected:
     string Vorname, Nachname;

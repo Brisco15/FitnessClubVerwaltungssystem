@@ -1,5 +1,4 @@
 #include "Trainer.h"
-#include<string>
 
 
  void Trainer::SetVorname(string Vorname)

@@ -1,36 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Fitnessclub">
-    <Position X="4.25" Y="2.5" Width="1.5" />
+    <Position X="3.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAQAAABAA=</HashCode>
+      <HashCode>AAACIAAAAAAAgAAAAIAAAAQAAAAgAAAYAAEAQAAABAA=</HashCode>
       <FileName>Fitnessclub.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Mitglied">
-    <Position X="1.5" Y="4.75" Width="1.5" />
+    <Position X="0.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACIAABCAAAgAAAAIAAAAAAAAAgAAAYAAEAAgAAAAA=</HashCode>
       <FileName>Mitglied.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Trainer">
-    <Position X="4.25" Y="4.75" Width="1.5" />
+    <Position X="3.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAFAgIggAAAAAAABAAAAEAgAAAYAAEAAgAAAAA=</HashCode>
       <FileName>Trainer.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Kurs">
-    <Position X="8.25" Y="4.75" Width="1.5" />
-    <InheritanceLine Type="Fitnessclub" FixedToPoint="true">
-      <Path>
-        <Point X="5" Y="4.247" />
-        <Point X="5" Y="4.45" />
-        <Point X="8.562" Y="4.45" />
-        <Point X="8.562" Y="4.75" />
-      </Path>
-    </InheritanceLine>
+    <Position X="7" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAEAAAAAAAIAAAAEQAAAAAAAAAAAAAQgAABAA=</HashCode>
       <FileName>Kurs.h</FileName>

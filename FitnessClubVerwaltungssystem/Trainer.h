@@ -1,10 +1,10 @@
 #pragma once
-#include "Fitnessclub.h"
 #include<string>
+#include "Fitnessclub.h"
 using namespace std;
 
 class Trainer :
-    protected Fitnessclub
+    public Fitnessclub
 {
 
 protected:
