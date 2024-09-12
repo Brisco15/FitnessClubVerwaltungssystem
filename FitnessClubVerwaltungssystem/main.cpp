@@ -139,74 +139,111 @@ int main()
 
 	//klassen-Polymorphie
 	cout << "Klassen Polymorphie " << endl << endl;
+
 	//Fitnessclub Klass
 	vector <Fitnessclub*> Personen;
 
 	Personen.resize(2);
 
-	// Speicherplatz reservieren
-	Personen[0] = new Trainer;
-	
+
+	for (int i = 0; i < 2; i++)
+	{
+
+
+		do
+		{
+			cout << "Auswahl der Personenart (M itglied, T rainer ): ";
+			cin >> personenart;
+
+			switch (personenart)
+			{
+				case 'm':
+				case 'M':
+					//speichertplatz reservieren
+					Personen[i] = new Mitglied;
+
+					//Mitglied Daten in der Klasse Fitnessclub speichern 
+					cout << "  Mitglied's Vorname eintragen : ";
+					cin >> vorname;
+					Personen[i]->SetVorname(vorname);
+
+					cout << "  Mitglied's Nachname eintragen : ";
+					cin >> nachname;
+					Personen[i]->SetNachname(nachname);
+
+					cout << "  Mitglied's Alter eintragen : ";
+					cin >> alter;
+					Personen[i]->SetAlter(alter);
+
+					cout << "  Mitglied's Nummer eintragen : ";
+					cin >> mitgliedsnummer;
+					Personen[i]->SetMitgliedsNummer(mitgliedsnummer);
+
+					break;
+
+				case 't':
+				case 'T':
+					//speicherplatz reservieren
+					Personen[i] = new Trainer;
+
+					//Trainer Daten in der Klasse Fitnessclub speichern 
+					cout << "  Trainer Vorname eintragen : ";
+					cin >> vorname;
+					Personen[i]->SetVorname(vorname);
+
+					cout << "  Trainer Nachname eintragen : ";
+					cin >> nachname;
+					Personen[i]->SetNachname(nachname);
+
+					cout << "  Trainer Alter eintragen : ";
+					cin >> alter;
+					Personen[i]->SetAlter(alter);
+
+					cout << "  TrainerID eintragen : ";
+					cin >> trainerID;
+					Personen[i]->SetTrainerID(trainerID);
+
+					cout << "  Trainer Fachgebiet eintragen : ";
+					cin >> fachgebiet;
+					Personen[i]->SetFachgebiet(fachgebiet);
+
+					break;
+
+				default:
+					//personenart nicht gleich Midglied oder Trainer 
+					cout << "Fehler! Drücken Sie (M oder m) für Mitglied oder (T oder t) für Trainer";
+					break;
+
+			}
+			// Nochmal eintragen die Dateneingabe für die Personenart 
+			cout << " Möchten Sie die Personenart nochmal eingeben? (J/N) : ";
+			cin >> nochmal;
+			cout << endl;
+
+		} while (nochmal == 'y' || nochmal == 'Y');
+
+	}
 
 	
+	//Ausgabe der Personenart
 
-	//Trainer Daten in der Klasse Fitnessclub speichern 
-	cout << "  Trainer Vorname eintragen : ";
-	cin >> vorname;
-	Personen[0]->SetVorname(vorname);
+	for (int i = 0; i < 2; i++)
+	{
+		//Ausgabe der Mitgliedsdaten
+		if (dynamic_cast <Mitglied*> (Personen[i]))
+		{
+			
+			cout << Personen[i]->GetVorname() << " " << Personen[i]->GetNachname() << " " << Personen[i]->GetAlter() << " " <<
+				Personen[i]->GetMitgliedsNummer() << " " << "ist einer unserer Abonnenten" << endl;
+		}
 
-	cout << "  Trainer Nachname eintragen : ";
-	cin >> nachname;
-	Personen[0]->SetNachname(nachname);
-
-	cout << "  Trainer Alter eintragen : ";
-	cin >> alter;
-	Personen[0]->SetAlter(alter);
-
-	cout << "  TrainerID eintragen : ";
-	cin >> trainerID;
-	Personen[0]->SetTrainerID(trainerID);
-
-	cout << "  Trainer Fachgebiet eintragen : ";
-	cin >> fachgebiet;
-	Personen[0]->SetFachgebiet(fachgebiet);
-
-
-	//Ausgabe der Trainersdaten
-	cout << Personen[0]->GetVorname() << " " << Personen[0]->GetNachname() << " " << "von Alter " << Personen[0]->GetAlter() << " " <<
-		"mit ID Nummer : " << Personen[0]->GetTrainerID() << " " << "ist einer unserer " << " " << Personen[0]->GetFachgebiet() << " " << "Trainer " << endl << endl;
-
-
-	Personen[1] = new Mitglied;
-	//Mitglied Daten in der Klasse Fitnessclub speichern 
-	cout << "  Mitglied's Vorname eintragen : ";
-	cin >> vorname;
-	Personen[1]->SetVorname(vorname);
-
-	cout << "  Mitglied's Nachname eintragen : ";
-	cin >> nachname;
-	Personen[1]->SetNachname(nachname);
-
-	cout << "  Mitglied's Alter eintragen : ";
-	cin >> alter;
-	Personen[1]->SetAlter(alter);
-
-	cout << "  Mitglied's Nummer eintragen : ";
-	cin >> mitgliedsnummer;
-	Personen[1]->SetMitgliedsNummer(mitgliedsnummer);
-
-
-
-
-	//Ausgabe der Daten
-
-	//Ausgabe der Trainersdaten
-	cout << Personen[0]->GetVorname() << " " << Personen[0]->GetNachname() << " " << Personen[0]->GetAlter() << " " <<
-		Personen[0]->GetTrainerID() << " " << "ist einer unserer " << " " << Personen[0]->GetFachgebiet() <<" " << "Trainer " << endl << endl;
-
-	//Ausgabe der Mitgliedsdaten
-	cout << Personen[1]->GetVorname() << " " << Personen[1]->GetNachname() << " " << Personen[1]->GetAlter() << " " << 
-		Personen[1]->GetMitgliedsNummer() << " " << "ist einer unserer Abonnenten" << endl;
-		
+		//Ausgabe der Trainersdaten
+		if (dynamic_cast <Trainer*> (Personen[i]))
+		{
+			//Ausgabe der Trainersdaten
+			cout << Personen[i]->GetVorname() << " " << Personen[i]->GetNachname() << " " << Personen[i]->GetAlter() << " " <<
+				Personen[i]->GetTrainerID() << " " << "ist einer unserer " << " " << Personen[i]->GetFachgebiet() << " " << "Trainer " << endl << endl;
+		}
+	}
 	return 0;
 }
