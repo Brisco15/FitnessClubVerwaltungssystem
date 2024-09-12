@@ -33,5 +33,8 @@ public:
 
     virtual void SetMitgliedsNummer(int Mitgliedsnummer);
     virtual int GetMitgliedsNummer();
+
+    virtual void SetTrainer(string trainer);
+    
 };
 

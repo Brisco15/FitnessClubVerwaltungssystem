@@ -1,5 +1,6 @@
 #include "Fitnessclub.h"
 #include"Mitglied.h"
+#include"Kurs.h"
 #include<iostream>
 #include<string>
 using namespace std;
@@ -71,5 +72,11 @@ int Fitnessclub::GetMitgliedsNummer()
 {
     return 0;
 }
+
+void Fitnessclub::SetTrainer(string trainer)
+{
+}
+
+
 
 

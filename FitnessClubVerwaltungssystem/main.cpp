@@ -211,12 +211,12 @@ int main()
 
 				default:
 					//personenart nicht gleich Midglied oder Trainer 
-					cout << "Fehler! Drücken Sie (M oder m) für Mitglied oder (T oder t) für Trainer";
+					cout << "Fehler! Drücken Sie (M oder m) für Mitglied oder (T oder t) für Trainer" << endl;
 					break;
 
 			}
 			// Nochmal eintragen die Dateneingabe für die Personenart 
-			cout << " Möchten Sie die Personenart nochmal eingeben? (J/N) : ";
+			cout << " Möchten Sie die Personenart nochmal eingeben? (J/N) : " << endl;
 			cin >> nochmal;
 			cout << endl;
 
@@ -234,7 +234,7 @@ int main()
 		{
 			
 			cout << Personen[i]->GetVorname() << " " << Personen[i]->GetNachname() << " " << Personen[i]->GetAlter() << " " <<
-				Personen[i]->GetMitgliedsNummer() << " " << "ist einer unserer Abonnenten" << endl;
+			" mit der Mitgliedsnummer " << Personen[i]->GetMitgliedsNummer() << " " << "ist einer unserer Abonnenten" << endl;
 		}
 
 		//Ausgabe der Trainersdaten
@@ -242,8 +242,12 @@ int main()
 		{
 			//Ausgabe der Trainersdaten
 			cout << Personen[i]->GetVorname() << " " << Personen[i]->GetNachname() << " " << Personen[i]->GetAlter() << " " <<
-				Personen[i]->GetTrainerID() << " " << "ist einer unserer " << " " << Personen[i]->GetFachgebiet() << " " << "Trainer " << endl << endl;
+			" mit dem ID " << Personen[i]->GetTrainerID() << " " << "ist einer unserer " << " " << Personen[i]->GetFachgebiet() << " " << "Trainer " << endl << endl;
 		}
 	}
+
+	
+
+
 	return 0;
 }
